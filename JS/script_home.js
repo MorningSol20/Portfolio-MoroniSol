@@ -1,21 +1,26 @@
-const track = document.querySelector(".carrossel-track");
-const slides = Array.from(track.children);
-const prevButton = document.querySelector(".esquerda");
-const nextButton = document.querySelector(".direita");
-
-let index = 0;
-
-function updateCarousel() {
-  track.style.transform = `translateX(-${index * 130}px)`;
+function cima() {
+  window.scrollTo({ top: 0, behavior: "smooth" });
 }
 
-nextButton.addEventListener("click", () => {
-  index = (index + 1) % slides.length;
-  updateCarousel();
-});
+document.addEventListener('DOMContentLoaded', function () {
+  const botao = document.getElementById('meuBotao');
 
-prevButton.addEventListener("click", () => {
-  index = (index - 1 + slides.length) % slides.length;
-  updateCarousel();
-});
+  function updateButton() {
+    const pos = window.pageYOffset || document.documentElement.scrollTop;
+    if (pos > 200) {
+      if (botao.hasAttribute('disabled')) {
+        botao.removeAttribute('disabled');
+      }
+    } else {
+      if (!botao.hasAttribute('disabled')) {
+        botao.setAttribute('disabled', '');
+      }
+    }
+  }
 
+  // check inicial (se o usuário já entrou na página com scroll)
+  updateButton();
+
+  // atualiza enquanto rola
+  window.addEventListener('scroll', updateButton, { passive: true });
+});
