@@ -1,0 +1,446 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    transition: all .5s;
+}
+
+:root {
+    /* Tipografia */
+    --font-title: 'Audiowide', sans-serif;
+    --font-paragraph: 'Nunito', sans-serif;
+
+    /* Cores */
+    --texto-principal: #F1F5F9;
+    --texto-secundario: #bbc3d3;
+    --destaque-primario: #6366F1;
+    --destaque-secundario: #019bb6;
+    --fundo-home: #0F172A;
+    --fundo: #111111;
+}
+
+
+body {
+    width: calc(100vw - 15px);
+    height: 100vh;
+    overflow-x: hidden;
+    font-family: var(--font-paragraph);
+    font-weight: 600;
+    background-color: var(--fundo);
+    color: var(--texto-principal);
+    scroll-behavior: smooth;
+}
+
+
+h1,
+.logo {
+    font-family: var(--font-title);
+    color: var(--texto-principal);
+    font-size: 45px;
+    font-weight: 800;
+    line-height: 1.4;
+    letter-spacing: 0.5;
+}
+
+h2,
+h3 {
+    font-family: var(--font-title);
+}
+
+h2 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    line-height: 1.3;
+    letter-spacing: 0;
+}
+
+h3 {
+    font-size: 1.5rem;
+    font-weight: 800;
+    line-height: 1.3;
+    letter-spacing: 0;
+}
+
+p {
+    color: var(--texto-secundario);
+    font-size: 1.2rem;
+    line-height: 1.6;
+    letter-spacing: 0;
+}
+
+a {
+    text-decoration: none;
+    color: var(--texto-secundario);
+    padding: 10px;
+    text-align: center;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    letter-spacing: 0;
+}
+
+header {
+    position: absolute;
+    left: 50px;
+    right: 50px;
+    display: block;
+    justify-content: space-between;
+}
+
+header .header-sociais,
+header .header-nav {
+    display: flex;
+    width: 100%;
+    padding: 0 100px;
+}
+
+header .header-sociais {
+    justify-content: end;
+    gap: 10px;
+}
+
+header .header-sociais>a {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    color: var(--destaque-primario);
+}
+
+header .header-sociais a {
+    fill: var(--destaque-primario);
+}
+
+header .header-sociais .git:hover {
+    fill: #55bc9d;
+    color: #55bc9d;
+}
+
+header .header-sociais .insta:hover {
+    fill: #7acdee;
+    color: #7acdee;
+}
+
+header .header-sociais .linkedin:hover {
+    fill: #8a3ab9;
+    color: #8a3ab9;
+}
+
+header .header-nav {
+    align-items: center;
+    justify-content: space-between;
+}
+
+header nav.header-nav>a {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+header nav.header-nav div.lista-nav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+header nav.header-nav div.lista-nav a:hover {
+    scale: 1.2;
+}
+
+header nav.header-nav .lista-nav>.ativo {
+    color: white;
+}
+
+.botao {
+    padding: 10px;
+    background-color: var(--destaque-primario);
+    border: solid 1px var(--fundo);
+    border-radius: 25px;
+}
+
+.botao:hover {
+    scale: 1.1;
+    background-color: var(--destaque-secundario);
+}
+
+.botao>a {
+    color: var(--texto-principal);
+    font-weight: 600;
+}
+
+main {
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+main section {
+    display: grid;
+    width: 80%;
+    height: 95%;
+    margin: 0 auto;
+    grid-template-columns: 50% 50%;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+}
+
+main section .infobox {
+    display: block;
+    width: 80%;
+    gap: 20px;
+}
+
+.infobox h1 {
+    border-bottom: 1px solid var(--texto-secundario);
+}
+
+.infobox p,
+.infobox h1,
+.infobox button {
+    margin: 10px 0 20px;
+}
+
+main>.back-svg {
+    position: absolute;
+    bottom: 0;
+    z-index: -1;
+}
+
+
+
+main section .images-profile img {
+    border-radius: 50%;
+    animation: border 1.5s linear infinite;
+}
+
+
+@keyframes border {
+    0%   { box-shadow: 0 0 20px 5px #6366F1; }
+    33%  { box-shadow: 0 0 20px 5px #06B6D4; }
+    66%  { box-shadow: 0 0 20px 5px #22C55E; }
+    100% { box-shadow: 0 0 20px 5px #6366F1; }
+}
+
+article {
+    display: flex;
+    width: 100%;
+    height: 40%;
+    background-color: var(--destaque-primario);
+    text-align: center;
+    align-items: center;
+    margin: 0;
+}
+
+.centralizar-article {
+    width: 70%;
+    margin: 0 auto;
+}
+
+
+.conquistas-infobox {
+    display: flex;
+    margin-right: 530px;
+}
+
+.conquistas-infobox>h2 {
+    margin: 30px;
+    font-size: 60px;
+    border: none;
+}
+
+.conquistas-habilidades {
+    background: url(./images/vertical.png)  no-repeat top/cover;
+    background-attachment: fixed;  
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.carrossel {
+    position: relative;
+    width: 1000px;
+    overflow: hidden;
+    border-radius: 10px;
+    padding: 10px 10px;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 20px var(--destaque-primario);
+}
+
+
+.carrossel-track {
+    display: flex;
+    cursor: default;
+    gap: 50px;
+    transition: transform .4s ease-in-out;
+    animation: slide 15s linear infinite;
+}
+@keyframes slide {
+  0%   { transform: translateX(10%); }
+  50% { transform: translateX(-50%); }
+  100%   { transform: translateX(10%); }
+}
+
+
+.box {
+    text-align: center;
+}
+
+
+.box>img {
+    width: 300px;
+    height: 200px;
+}
+
+.habilidades {
+    background-color: #0F172A;
+    background: url(./images/vertical.png)  no-repeat top/cover;
+    background-attachment: fixed;  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #F1F5F9;
+    padding: 50px 20px;
+    font-family: Arial, sans-serif;
+    width: 100%;
+    height: 120vh;
+}
+
+/* Mudanças com BOOTSTRAP */
+.skills h2 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.skills {
+    width: 80%;
+}
+
+.skills-container {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    /* empilha em telas pequenas */
+}
+
+.skills-column {
+    flex: 1 1 500px;
+}
+
+.skills-column p {
+    margin: 0 0 5px;
+    font-weight: bold;
+}
+
+.progress {
+    background-color: #1E293B;
+    border-radius: 10px;
+    overflow: hidden;
+    height: 25px;
+    margin-bottom: 20px;
+}
+
+.progress-bar {
+  line-height: 25px;
+  color: #F1F5F9;
+  font-weight: bold;
+  padding-left: 10px;
+  transition: width 2s ease-in-out; /* animação da largura */
+}
+
+/* cores das barras */
+.habilidades {
+  background-color: #0F172A;
+  color: #F1F5F9;
+  padding: 50px 20px;
+  font-family: Arial, sans-serif;
+}
+
+.skills > h2 {
+  margin-bottom: 40px;
+  font-size: 2.8rem;
+}
+
+.skills h3 {
+    margin: 20px 0;
+}
+
+.skills-container {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+
+
+.skills-column p {
+  margin: 0 0 5px;
+  font-weight: bold;
+  color: var(--texto-principal);
+}
+
+.progress {
+  background-color: #1E293B;
+  border-radius: 10px;
+  overflow: hidden;
+  height: 25px;
+  margin-bottom: 20px;
+}
+
+.progress-bar {
+  width: 100%; /* tamanho fixo */
+  height: 100%;
+  line-height: 25px;
+  font-weight: bold;
+  padding-left: 10px;
+  color: var(--texto-principal);
+  position: relative;
+  background-size: 40px 40px; /* tamanho do listrado */
+  animation: stripe 1s linear infinite;
+}
+
+/* cores das barras */
+.html-bar { background-color: #E34F26;}
+.css-bar { background-color: #1572B6;}
+.js-bar { background-color: #c2ab00; color: #000;}
+.react-bar { background-color: #369a47; color: #000;} 
+.node-bar { background-color: #339933;}  
+.python-bar { background-color: #e68d07;} 
+.logic-bar { background-color: #111111; }
+.wordpress-bar { background-color: #013aad; }
+.pt-bar { background-color: #008d36; }
+.spa-bar { background-color: #ab591b; }
+.eng-bar { background-color: #0082f3; }
+.git-bar { background-color: #052845; }
+.processo-bar { background-color: #300101; }
+
+
+/* efeito listrado/animado tipo bootstrap */
+.progress-bar::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-image: linear-gradient(
+    45deg,
+    rgba(255,255,255,0.15) 25%,
+    transparent 25%,
+    transparent 50%,
+    rgba(255,255,255,0.15) 50%,
+    rgba(255,255,255,0.15) 75%,
+    transparent 75%,
+    transparent
+  );
+  background-size: 40px 40px;
+  animation: listras 1s linear infinite;
+}
+
+@keyframes listras {
+  0% { background-position: 0 0; }
+  100% { background-position: 40px 0; }
+}
