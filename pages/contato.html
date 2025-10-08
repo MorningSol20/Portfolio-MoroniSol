@@ -4,15 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://kit.fontawesome.com/faa04db4f2.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@500&display=swap" rel="stylesheet">
-    <title>Morôni Sol - Portfolio</title>
+    <title>Contato - Portfolio</title>
 </head>
 
 <body>
@@ -38,9 +38,24 @@
                     </path>
                 </svg> LinkedIn</a>
         </div>
+
         <nav class="header-nav">
-            <a href="../index.html" class="logo"><img src="../images/logo.png" alt="Logotipo" class="img-logo"
-                    width="50">Moroni Sol</a>
+            <div class="logo-bloco">
+                <img src="../images/logo.png" alt="Logotipo" class="img-logo" width="50">
+                <a href="../index.html" class="logo">Moroni Sol</a>
+            </div>
+            <div class="overlay"></div>
+            <div class="container">
+                <button class="botao toggle"><i class="fa-solid fa-angle-left"></i></button>
+
+                <div class="canvaoff">
+                    <a href="../index.html">Home</a>
+                    <a href="./sobre-mim.html">Sobre mim</a>
+                    <a href="./projetos.html">Projetos</a>
+                    <a href="./servicos.html">Serviços</a>
+                    <button class="botao"><a href="./contato.html">Contato</a></button>
+                </div>
+            </div>
 
             <div class="lista-nav">
                 <a href="../index.html">Home</a>
@@ -50,6 +65,7 @@
                 <button class="botao"><a href="./contato.html">Contato</a></button>
             </div>
         </nav>
+    </header>
     </header>
 
     <main>
@@ -101,7 +117,7 @@
         </section>
 
         <section class="footer-bottom">
-            <p>Copyright &copy; 2025 Morôni Sol | Powered by Morôni Sol</p>
+            <p class="pFooter">Copyright &copy; 2025 Morôni Sol </p>
         </section>
     </footer>
     <script src="../JS/script_home.js"></script>

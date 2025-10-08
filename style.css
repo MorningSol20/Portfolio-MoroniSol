@@ -41,10 +41,6 @@ a {
     transition: color 0.3s ease;
 }
 
-a:hover {
-    color: var(--destaque-primario);
-}
-
 /* PARÁGRAFOS */
 p {
     font-size: clamp(1rem, 2vw, 1.2rem);
@@ -168,12 +164,17 @@ header nav.header-nav div.lista-nav {
     gap: 20px;
 }
 
-body.no-scroll {
-    overflow: hidden;
+header nav.header-nav div.lista-nav a {
+    padding: 10px;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
 }
 
 .container {
     display: none;
+    position: fixed;
+    top: 0;
+    right: -55px;
 }
 
 .toggle {
@@ -235,12 +236,10 @@ button.toggle {
     }
 
     .header-nav>.container {
-        position: fixed;
-        top: 0;
-        right: 0;
+        display: block;
         height: 100vh;
         background-color: var(--destaque-primario);
-        z-index: 3;
+        z-index: 5;
     }
 
     .toggle {
@@ -249,15 +248,19 @@ button.toggle {
         color: var(--texto-principal);
         border: none;
         position: relative;
-        bottom: 0;
-        left: -25px;
+        top: 30px;
+        left: -55px;
+    }
+
+    .canvaoff a {
+        text-align: start;
     }
 
     .toggle:hover {
         color: var(--destaque-primario);
     }
 
-    header .canvaoff {
+    .canvaoff {
         display: none;
         flex-direction: column;
         gap: 15px;
@@ -269,9 +272,32 @@ button.toggle {
     .container.ativo {
         display: flex;
     }
+    .overflow-hidden {
+        overflow: hidden;
+    }
+
+    .overflow-hidden::before {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: black;
+        opacity: .8;
+        z-index: 3;
+    }
+
+
+    .header-nav>.container.retorn {
+        right: 0 !important;
+        transition: transform 0.3s ease-in-out;
+    }
 
     .toggle.rotate {
         transform: rotate(180deg);
+        transition: transform 0.3s ease-in-out;
+        left: -25px;
     }
 
     header .lista-nav {
@@ -280,10 +306,24 @@ button.toggle {
 
     header nav.header-nav div.container .canvaoff a:hover {
         scale: 1.2;
+        color: white;
     }
 
     header nav.header-nav div.container .canvaoff>.ativo {
         color: white;
+    }
+
+    header nav.header-nav div.container .canvaoff .botao {
+        background-color: var(--destaque-primario);
+        padding: 5px 10px;
+    }
+
+    header nav.header-nav div.container .canvaoff .botao:hover {
+        background-color: var(--texto-principal);
+    }
+
+    header nav.header-nav div.container .canvaoff .botao:hover a {
+        color: var(--destaque-primario);
     }
 }
 
@@ -305,11 +345,10 @@ button.toggle {
     }
 }
 
-@media (min-width: 590px) {
-    main {
-        padding: 0% !important;
+@media (max-width: 590px) {
+    main>.back-svg {
+        top: 300px !important;
     }
-
 }
 
 header nav.header-nav div.lista-nav a:hover {
@@ -405,7 +444,6 @@ main section .infobox {
 .infobox .botao:hover {
     background: var(--texto-principal);
     color: var(--destaque-primario);
-    transform: scale(3);
 }
 
 
@@ -471,7 +509,6 @@ article {
 
 .centralizar-article {
     max-width: 800px;
-    /* limita largura para boa leitura */
     margin: 0 auto;
 }
 
@@ -502,8 +539,17 @@ article {
 }
 
 @media (max-width: 590px) {
-    h2 {
-        font-size: 30px !important;
+    .conquistas-infobox {
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .conquistas-infobox>h2 {
+        font-size: 40px;
+        margin: 10px;
     }
 }
 
@@ -561,7 +607,6 @@ article {
     position: absolute;
     bottom: 10px;
     right: 10px;
-    z-index: 7;
 }
 
 .carrossel-track::scroll-button(left) {
@@ -901,6 +946,7 @@ footer.oficial {
 
 .footer-up {
     background-color: var(--destaque-primario);
+    padding: 30px;
     height: 80%;
     width: 100%;
     display: flex;
@@ -939,12 +985,14 @@ footer.oficial {
     justify-content: center;
     height: 20%;
     width: 100%;
+    padding: 10px;
 }
 
-.footer-bottom p {
+.footer-bottom .pFooter {
     display: flex;
-    align-self: center;
-    height: 30px;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
 }
 
 .cima {
@@ -956,10 +1004,17 @@ footer.oficial {
     background-color: var(--texto-principal);
     padding: 5px;
     cursor: pointer;
+    z-index: 3;
 }
 
-.botao.cima svg {
-    fill: var(--destaque-primario);
+.botao.cima svg path {
+    stroke: var(--destaque-primario);
+}
+.cima:hover {
+    background-color: var(--destaque-primario);
+}
+.botao.cima:hover svg path {
+    stroke: var(--texto-principal);
 }
 
 button.cima:disabled {

@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   function updateButton() {
     const pos = window.pageYOffset || document.documentElement.scrollTop;
-    if (pos > 200) {
+    if (pos > 500) {
       if (botao.hasAttribute('disabled')) {
         botao.removeAttribute('disabled');
       }
@@ -27,10 +27,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
 const toggle = document.querySelector('.toggle');
 const canvaoff = document.querySelector('.canvaoff');
+const container = document.querySelector('.container');
+const body = document.querySelector('body');
 
 toggle.addEventListener('click', () => {
   canvaoff.classList.toggle('ativo');
-  toggle.classList.toggle('rotate')
-  document.body.classList.add("no-scroll");
+  toggle.classList.toggle('rotate');
+  container.classList.toggle('retorn');
+  body.classList.toggle('overflow-hidden');
 })
-document.body.classList.remove("no-scroll");
+
