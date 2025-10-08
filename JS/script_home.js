@@ -24,3 +24,13 @@ document.addEventListener('DOMContentLoaded', function () {
   // atualiza enquanto rola
   window.addEventListener('scroll', updateButton, { passive: true });
 });
+
+const toggle = document.querySelector('.toggle');
+const canvaoff = document.querySelector('.canvaoff');
+
+toggle.addEventListener('click', () => {
+  canvaoff.classList.toggle('ativo');
+  toggle.classList.toggle('rotate')
+  document.body.classList.add("no-scroll");
+})
+document.body.classList.remove("no-scroll");
