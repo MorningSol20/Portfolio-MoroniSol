@@ -399,11 +399,11 @@ main {
     overflow: hidden;
 }
 
-main .home {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+main section.home {
+    display: flex;
+    flex-direction: row;
     align-items: center;
-    justify-items: center;
+    justify-content: center;
     width: 100%;
     max-width: 1200px;
     gap: 2rem;
@@ -491,9 +491,8 @@ main section .images-profile img {
 }
 
 @media (max-width: 960px) {
-    main section {
-        grid-template-columns: 1fr;
-        /* stacka em uma coluna */
+    main .home {
+        flex-direction: column !important;
         text-align: center;
         gap: 2rem;
     }
