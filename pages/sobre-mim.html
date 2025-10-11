@@ -5,7 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flag-icons/css/flag-icons.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
@@ -67,41 +70,132 @@
         </nav>
     </header>
 
-    <main class="sobre">
-        <button onclick="cima()" class="botao cima" id="meuBotao"><svg xmlns="http://www.w3.org/2000/svg" width="30"
-                viewBox="0 0 24 24">
-                <path d="M6 15l6-6 6 6" stroke="#6366F1" stroke-width="2" fill="none" stroke-linecap="round"
-                    stroke-linejoin="round" />
+    <main>
+        <button onclick="cima()" class="botao cima" id="meuBotao">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" viewBox="0 0 24 24">
+                <path d="M6 15l6-6 6 6" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" />
             </svg>
         </button>
-        <section>
-            <div class="infobox">
-                <h1>Morôni Sol</h1>
-                <p>
-                    Olá, eu sou Morôni Sol, desenvolvedor e apaixonado por tecnologia.
-                </p>
-            </div>
 
+        <section class="about-me">
+            <h3>Um pouco sobre mim</h3>
+            <h1>Quem sou eu?</h1>
+            <img src="../images/sobre.jpg" alt="Sobre mim" width="300">
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta omnis eaque praesentium similique odit
+                laudantium culpa corrupti autem expedita recusandae quia dicta, tempora natus cum commodi maxime
+                pariatur quidem quaerat. Eum tempore quod voluptate quibusdam minus deleniti, incidunt hic doloribus
+                quam odit sed dolores omnis recusandae facere voluptates laborum odio aspernatur vel obcaecati ipsa! Ex
+                ab eaque corrupti ipsam dolorum. Adipisci at ullam temporibus qui suscipit saepe. Mollitia labore fuga
+                numquam saepe iure eos impedit molestias? Tenetur facere eligendi quaerat veniam blanditiis modi
+                excepturi quasi, recusandae suscipit exercitationem laudantium, velit sunt maiores at, sed corrupti
+                totam quos aliquid obcaecati accusantium dolore rem quidem laboriosam? Minus quasi modi tenetur corrupti
+                facere.</p>
+
+            <div class="container-things">
+                <div id="educacao">
+                    <i class="fa-solid fa-school things"></i>
+                    <h3>Educação</h3>
+                </div>
+                <div id="experiencias">
+                    <i class="fa-solid fa-briefcase things"></i>
+                    <h3>Experiências</h3>
+                </div>
+                <div id="certificados">
+                    <i class="fa-solid fa-certificate things"></i>
+                    <h3>Certificados</h3>
+                </div>
+                <div id="curriculos">
+                    <i class="fa-solid fa-file things"></i>
+                    <h3>Curriculos</h3>
+                </div>
+            </div>
         </section>
 
 
     </main>
 
-    <article>
+    <section class="content" id="content-educacao">
+        <svg width="10" height="10" viewBox="0 0 10 10" class="triangulo triangulo-edu">
+            <polygon points="5,0 10,10 0,10" fill="var(--destaque-primario)" />
+        </svg>
 
-    </article>
+        <h2>Educação</h2>
+        <div class="cards-educacao">
+            <div class="card-educacao">
+                <h3>Ensino Médio</h3>
+                <p>Escola Estadual de Ensino Fundamental e Médio Professora Maria de Lourdes Costa - 2017 a 2019</p>
+            </div>
+            <div class="card-educacao">
+                <h3>Técnico em Informática</h3>
+                <p>Instituto Federal de Educação, Ciência e Tecnologia do Ceará (IFCE) - 2020 a 2022</p>
+            </div>
+            <div class="card-educacao">
+                <h3>Graduação em Análise e Desenvolvimento de Sistemas</h3>
+                <p>Centro Universitário Estácio do Ceará - Início em 2023 (cursando)</p>
+            </div>
+    </section>
 
-    <section class="">
+    <section class="content" id="content-xp">
+        <svg width="10" height="10" viewBox="0 0 10 10" class="triangulo triangulo-xp">
+            <polygon points="5,0 10,10 0,10" fill="var(--destaque-primario)" />
+        </svg>
+
+        <h2>Experiências</h2>
+        <div class="cards-educacao">
+            <div class="card-educacao">
+                <h3>Estágio em Desenvolvimento Web</h3>
+                <p>Empresa XYZ - 2022</p>
+            </div>
+            <div class="card-educacao">
+                <h3>Técnico em Informática</h3>
+                <p>Instituto Federal de Educação, Ciência e Tecnologia do Ceará (IFCE) - 2020 a 2022</p>
+            </div>
+            <div class="card-educacao">
+                <h3>Graduação em Análise e Desenvolvimento de Sistemas</h3>
+                <p>Centro Universitário Estácio do Ceará - Início em 2023 (cursando)</p>
+            </div>
+    </section>
+
+    <section class="content" id="content-certificados">
+        <svg width="10" height="10" viewBox="0 0 10 10" class="triangulo triangulo-certif">
+            <polygon points="5,0 10,10 0,10" fill="var(--destaque-primario)" />
+        </svg>
+
+        <h2>Certificados</h2>
+        <div class="content-certs">
+            <div class="card-certificado">
+                <img src="../certificados/cursoemvideo.png" alt="Certificado Logica de programação" width="400">
+                <img src="../certificados/englishconnect.png" alt="Certificado de inglês" width="400">
+                <img src="../certificados/pathwayconnect.png"
+                    alt="Certificado de habilidades acadêmicas, profissionais e para a vida" width="400">
+                <img src="../certificados/rocketseat.png" alt="Certificado de desenvolvimento web" width="400">
+                <img src="../certificados/cursoemvideo.png" alt="Certificado Logica de programação" width="400">
+                <img src="../certificados/englishconnect.png" alt="Certificado de inglês" width="400">
+                <img src="../certificados/pathwayconnect.png"
+                    alt="Certificado de habilidades acadêmicas, profissionais e para a vida" width="400">
+                <img src="../certificados/rocketseat.png" alt="Certificado de desenvolvimento web" width="400">
+            </div>
+        </div>
+    </section>
+
+    <section class="content" id="content-cv">
+        <svg width="10" height="10" viewBox="0 0 10 10" class="triangulo triangulo-cv">
+            <polygon points="5,0 10,10 0,10" fill="var(--destaque-primario)" />
+        </svg>
+
+        <h2>Currículos</h2>
+        <div class="botoes-curriculos">
+            <h3>Escolha o idioma dos curriculos:</h3>
+            <a href="https://drive.google.com/drive/folders/1B4rEes6ckF5Z98NvNGSbLrBSjWzOm6e-?usp=sharing"
+                target="_blank" rel="noopener noreferrer"><button class="botao">Português <span class="fi fi-br"></span>
+                </button></a>
+            <a href="https://drive.google.com/drive/folders/1EEIEd49QdJeqDudvj-A3NasnKeluiJp1?usp=sharing"
+                target="_blank" rel="noopener noreferrer"><button class="botao">English <span
+                        class="fi fi-us"></span></button></a>
+        </div>
 
     </section>
 
-    <section class="historico">
-
-    </section>
-
-    <section class="certificados">
-
-    </section>
 
     <footer class="oficial">
         <section class="footer-up">
@@ -122,6 +216,7 @@
         </section>
     </footer>
     <script src="../JS/script_home.js"></script>
+    <script src="../JS/sobre-mim.js"></script>
 </body>
 
 </html>
