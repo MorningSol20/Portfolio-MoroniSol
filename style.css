@@ -1665,7 +1665,7 @@ section.about-me {
 .hero-main-service .hero-service {
   display: flex;
   flex-direction: row;
-  width: 80%;
+  width: 100%;
   margin: 0 auto;
   align-items: center;
   justify-content: center;
@@ -1678,7 +1678,7 @@ section.about-me {
 
 section {
   display: flex;
-  width: 80%;
+  width: 100%;
   margin: 0 auto;
   flex-wrap: wrap;
 }
@@ -1743,17 +1743,12 @@ section aside .menu-aside ol a.ativo {
 /* Tablets (largura até 992px) */
 @media (max-width: 992px) {
   .hero-main-service .hero-service {
-    flex-direction: column;
-    text-align: center;
+    width: 60%;
+    margin-top: 100px;
   }
 
   .hero-main-service .hero-service img {
     width: 70%;
-  }
-
-  section {
-    flex-direction: column;
-    width: 90%;
   }
 
   aside {
@@ -1780,21 +1775,7 @@ section aside .menu-aside ol a.ativo {
 
 /* Celulares grandes (largura até 768px) */
 @media (max-width: 768px) {
-  .hero-main-service .hero-service img {
-    width: 90%;
-  }
 
-  .titulo-service h1 {
-    font-size: 1.8rem;
-  }
-
-  .titulo-service p {
-    font-size: 1rem;
-  }
-
-  .menu-aside h2 {
-    font-size: 1.3rem;
-  }
 
   .menu-aside ol li {
     padding: 10px 0;
@@ -1849,3 +1830,4 @@ section aside .menu-aside ol a.ativo {
     font-size: 0.85rem;
   }
 }
+
