@@ -5,7 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
@@ -68,18 +70,96 @@
     </header>
     </header>
 
-    <main>
+    <main class="main-projetos">
         <button onclick="cima()" class="botao cima" id="meuBotao"><svg xmlns="http://www.w3.org/2000/svg" width="30"
                 viewBox="0 0 24 24">
                 <path d="M6 15l6-6 6 6" stroke="#6366F1" stroke-width="2" fill="none" stroke-linecap="round"
                     stroke-linejoin="round" />
             </svg>
         </button>
-        <section>
-
+        <section class="hero-projetos">
+            <h1>Projetos</h1>
+            <p>Alguns dos trabalhos e experimentos que desenvolvi recentemente.</p>
+            <ol class="filtros">
+                <li data-filter="all" class="active">Todos</li>
+                <li data-filter="html">HTML/CSS</li>
+                <li data-filter="app">App</li>
+                <li data-filter="python">Python</li>
+                <li data-filter="js">JS</li>
+            </ol>
         </section>
-
     </main>
+
+    <article class="article-projetos">
+        <div>
+            <figure data-category="html">
+                <img src="https://wallpapers.com/images/featured/fundo-full-hd-vjzgi9qrproc2upa.jpg"
+                    alt="Imagem do Projeto">
+                <h3>Lorem, ipsum.</h3>
+                <figcaption> Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, id.</figcaption>
+                <a href="#">Ver Projeto</a><i class="fa-brands fa-discord"></i>
+            </figure>
+
+            <figure data-category="app">
+                <img src="https://wallpapers.com/images/featured/fundo-full-hd-vjzgi9qrproc2upa.jpg"
+                    alt="Imagem do Projeto">
+                <h3>Lorem, ipsum.</h3>
+                <figcaption> Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, id.</figcaption>
+                <a href="#">Ver Projeto</a><i class="fa-brands fa-discord"></i>
+            </figure>
+
+            <figure data-category="python">
+                <img src="https://wallpapers.com/images/featured/fundo-full-hd-vjzgi9qrproc2upa.jpg"
+                    alt="Imagem do Projeto">
+                <h3>Lorem, ipsum.</h3>
+                <figcaption> Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, id.</figcaption>
+                <a href="#">Ver Projeto</a><i class="fa-brands fa-discord"></i>
+            </figure>
+
+            <figure data-category="js">
+                <img src="https://wallpapers.com/images/featured/fundo-full-hd-vjzgi9qrproc2upa.jpg"
+                    alt="Imagem do Projeto">
+                <h3>Lorem, ipsum.</h3>
+                <figcaption> Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, id.</figcaption>
+                <a href="#">Ver Projeto</a><i class="fa-brands fa-discord"></i>
+            </figure>
+
+            <figure data-category="html">
+                <img src="https://wallpapers.com/images/featured/fundo-full-hd-vjzgi9qrproc2upa.jpg"
+                    alt="Imagem do Projeto">
+                <h3>Lorem, ipsum.</h3>
+                <figcaption> Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, id.</figcaption>
+                <a href="#">Ver Projeto</a><i class="fa-brands fa-discord"></i>
+            </figure>
+
+            <figure data-category="python">
+                <img src="https://wallpapers.com/images/featured/fundo-full-hd-vjzgi9qrproc2upa.jpg"
+                    alt="Imagem do Projeto">
+                <h3>Lorem, ipsum.</h3>
+                <figcaption> Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, id.</figcaption>
+                <a href="#">Ver Projeto</a><i class="fa-brands fa-discord"></i>
+            </figure>
+
+            <figure data-category="js">
+                <img src="https://wallpapers.com/images/featured/fundo-full-hd-vjzgi9qrproc2upa.jpg"
+                    alt="Imagem do Projeto">
+                <h3>Lorem, ipsum.</h3>
+                <figcaption> Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, id.</figcaption>
+                <a href="#">Ver Projeto</a><i class="fa-brands fa-discord"></i>
+            </figure>
+
+            <figure data-category="html">
+                <img src="https://wallpapers.com/images/featured/fundo-full-hd-vjzgi9qrproc2upa.jpg"
+                    alt="Imagem do Projeto">
+                <h3>Lorem, ipsum.</h3>
+                <figcaption> Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, id.</figcaption>
+                <a href="#">Ver Projeto</a><i class="fa-brands fa-discord"></i>
+            </figure>
+        </div>
+
+    </article>
+
+
 
     <footer class="oficial">
         <section class="footer-up">
@@ -94,12 +174,12 @@
                         </svg></a></button>
             </div>
         </section>
-
         <section class="footer-bottom">
             <p class="pFooter">Copyright &copy; 2025 Morôni Sol </p>
         </section>
     </footer>
     <script src="../JS/script_all.js"></script>
+    <script src="../JS/project.js"></script>
 </body>
 
 </html>
