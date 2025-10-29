@@ -1905,6 +1905,8 @@ main .hero-projetos ol li {
 .article-projetos div figure {
     flex: 1 1 clamp(250px, 25%, 400px);
     border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
     padding: 10px;
     width: 100%;
     max-width: 300px;
@@ -1915,6 +1917,24 @@ main .hero-projetos ol li {
     transition: box-shadow 0.35s ease, transform 0.35s ease;
     will-change: box-shadow, transform;
     transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.article-projetos div figure> p{
+    margin: 10px 0 10px 0;
+}
+.article-projetos div figure> p> a{
+    /* border: 1px solid white; */
+    border-radius: 10px;
+    margin-right: 15px;
+    color: white;
+}
+.article-projetos div figure> p> a:hover{
+    color: var(--destaque-primario);
+}
+.article-projetos div figure> p> i{
+    color: var(--texto-principal);
+}
+.article-projetos div figure> p:hover> i{
+    color: var(--destaque-primario);
 }
 
 .article-projetos div figure>img {
@@ -1970,12 +1990,17 @@ main .hero-projetos ol li {
     cursor: pointer;
     padding: 0.5rem 1rem;
     border-radius: 8px;
-    transition: background .5s, color .5s;
+    transition: background .2s, color .5s;
+}
+.filtros li:hover {
+    color: var(--texto-principal);
+    background-color: var(--destaque-primario);
 }
 
 .filtros li.active {
     background: #111;
     color: #fff;
+    text-decoration: underline;
 }
 
 .article-projetos figure.hidden {
