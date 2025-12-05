@@ -23,3 +23,10 @@ form.addEventListener('submit', function (e) {
     // Se quiser limpar os campos:
     form.reset();
 });
+
+const params = new URLSearchParams(window.location.search);
+const servico = params.get("servico");
+
+if (servico) {
+    document.getElementById("campoServico").value = servico;
+}

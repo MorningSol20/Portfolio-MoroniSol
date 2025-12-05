@@ -28,3 +28,5 @@ const observer = new IntersectionObserver((entries) => {
 
 // Observa cada caixa de serviço
 boxes.forEach(box => observer.observe(box));
+
+
